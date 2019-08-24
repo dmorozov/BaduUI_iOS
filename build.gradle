@@ -1,0 +1,20 @@
+apply plugin: 'java'
+apply plugin: 'badu_gradle_j2objc'
+apply plugin: 'idea'
+
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile project(':JavaLibrary')
+    compile project(':AnotherJavaLibrary')
+}
+
+j2objcConfig {
+    translateArgs '-use-arc'
+    translateArgs '--no-package-directories'
+    translateArgs '--prefixes', 'prefixes.properties'
+
+    srcGenFolder "${project.projectDir}/BaduUI"
+}
