@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = 'BaduUI_iOS'
-  s.version          = '0.0.1'
+  s.version          = '0.0.2'
   s.summary          = 'A short description of BaduUI_iOS.'
 
 # This description is used to generate tags and improve search results.
@@ -33,7 +33,7 @@ TODO: Add long description of the pod here.
   s.source_files = 'BaduUI_iOS/*.h'
 
   s.subspec 'J2Objc' do |ss|
-    ss.source_files = 'BaduUI_iOS/J2ObjC/dist/**/*.h'
+    ss.source_files = 'BaduUI_iOS/J2ObjC/dist/include/**/*.h'
   end
 
   s.subspec 'BaduUI' do |ss|
